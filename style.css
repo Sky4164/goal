@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@300..700&display=swap');
+html{
+    --var-bg--color:rgba(111, 207, 192, 0.267);
+    --var-bg--light:rgba(171, 199, 183, 0.2);
+    --var-bg--button:rgb(58, 41, 210)
+
+}
+body{
+    font-family: "Pontano Sans", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--var-bg--color);
+}
+
+header{
+    width: 100%;
+    height: 4rem;
+    background-color: azure;
+    padding: 0 2rem;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header nav ul{
+    align-items: center;
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    transition: 0,3s;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+nav ul li a:hover{
+    color:#7f4aad
+}
+
+header button{
+    background-color: aquamarine;
+    color:var(--var-bg--button);
+    border: none;
+    cursor: pointer;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: 0.5;
+
+}
+header button:hover{
+    background-color: aliceblue;
+    color:cyan;
+    border: 1px solid rgb(95, 188, 232);
+}
+
+/*mise en forme de la section main*/
+main{
+    padding: 2rem;
+}
+#debut{
+    width: 100%;
+    height: 70vh ;
+    border-radius: 5px;
+    padding: 1rem;
+    background: linear-gradient(120deg,
+    rgb(86, 155, 211) 15%,rgb(225, 168, 24) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#debut .gauche h1{
+    font-size: 3rem;
+    font-weight: 900;
+    color: darkblue;
+}
+#debut .gauche p{
+    font-size: clamp(1rem,2vh,1rem);
+    color: bisque;
+
+}
+.gauche button{
+    background-color: rgb(225, 168, 24);
+    color: aqua;
+    margin-top: 1.4rem;
+    padding: 0.9rem 1rem ;
+    border-radius: 0.3rem;
+    font-weight: 300;
+    cursor: pointer;
+    border: none;
+    transition: 0,3s;
+}
+.gauche button:hover{
+    background-color: aquamarine;
+    color: black;
+}
+.droite{
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.droite img{
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 4rem;
+    z-index: 100;
+
+}
+.effets{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.effets .cercle{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: animation 4s ease-in-out infinite;
+}
+ .cercle:nth-child(1){
+    background: linear-gradient(90deg,rgb(86, 155, 211)15%,rgb(225, 168, 24) 100%) ;
+    position: absolute;
+    right: 10px;
+    animation-delay:1s ;
+}
+ .cercle:nth-child(2){
+    background: linear-gradient(90deg,rgb(86, 155, 211)15%,rgb(227, 242, 23) 100%) ;
+    position: absolute;
+    left: 10px;
+    animation-delay: 2s;
+}
+
+ .cercle:nth-child(3){
+    background: linear-gradient(90deg,rgb(86, 155, 211)15%,rgb(227, 242, 23) 100%) ;
+    position: absolute;
+    top:10px ;
+    left: 20px;
+    
+}
+@keyframes animation {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
+
+#service{
+    margin-top: 2rem;
+
+}
+#service h3{
+    font-size: 2rem;
+    font-weight: 900;
+    color: blue;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.service-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.service-list .card-sevice{
+    flex: 1;
+    background-color: antiquewhite;
+    padding: 1rem;
+    border-radius: 5px;
+    position: relative;
+}
+.card-sevice .icon{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(86, 150, 224);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -25px;
+    border-radius: 5px;
+
+}
+.card-sevice .icon i{
+    font-size: 1.3rem;
+    color:#70f0e6 ;
+}
+.card-sevice h2{
+    margin-top: 10px;
+}
+#album{
+    margin-top: 2rem;
+}
+#album h3{
+    font-size: 2rem;
+    font-weight: 900;
+    color: blue;
+    text-align: center;
+}
+#album .photo{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1rem ;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+#album a{
+    text-decoration: none;
+    font-size:1rem;
+    font-weight: 900;
+    background-color: #ccb6fa;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#album a:hover{
+    background-color: #fff;
+
+}
+
+#contact{
+    margin-top: 3rem;
+    display: flex;
+    height: calc(100vh-200px);
+    background-color: whitesmoke;
+}
+#contact .partie1, .partie2{
+    flex: 1;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    position: relative;
+    padding: 1rem;
+}
+#contact .partie1{
+    background-color: #ccb6fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+#contact h2{
+    color: deeppink;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.partie2 form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.partie2 form input,textarea{
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+.partie2 form textarea{
+    height: 100px;
+
+}
+.partie2 form input:focus,textarea:focus{
+    border: 1px solid rgb(191, 53, 191);
+}
+.partie2 form button{
+    background-color: rgba(111, 207, 192, 0.267);
+    color:rgb(247, 135, 135);
+    border: none;
+    padding: 0.9rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.partie2 form button:hover{
+    background-color: #ccb6fa;
+    color: rgb(44, 41, 41);
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(120deg,
+    rgb(86, 155, 211) 15%,rgb(225, 168, 24) 100%);
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#7f4aad;
+}
+footer p{
+    font-size: 1rem;
+    font-weight: 900;
+}
+.reseaux{
+    position: fixed;
+    right: 10px;
+    bottom: 1rem;
+    background: linear-gradient(30deg,rgb(80, 241, 235)45%,rgb(236, 205, 50)100%);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    gap: 5px;
+    cursor: pointer;
+}
+.reseaux .cartes{
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.cartes:hover{
+    background-color: #fff;
+    border-radius: 50%;
+}
+/*media queries*/
+
+@media screen and (max-width:768px) {
+    header nav{
+        display: none;
+    }
+    main{
+        padding: 1rem;
+    }
+    #debut{
+        flex-direction:column ;
+        min-height: 100vh;
+        gap:10px ;
+    }
+    .gauche{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #debut .gauche h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .service-list{
+        flex-direction: column;
+    }
+    #contact{
+        flex-direction: column-reverse;
+        min-height: 100vh;
+    }
+}
+
